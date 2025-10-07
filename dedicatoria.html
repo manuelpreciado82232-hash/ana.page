@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ANA👸🏼</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Great+Vibes&display=swap');
+
+    :root{
+      --bg1:#fbf9fb;
+      --bg2:#f0f5ff;
+      --card:#ffffff;
+      --ink:#1f1f1f;
+      --muted:#666;
+      --accent:#b23b4a;
+      --radius:14px;
+      --glass: rgba(255,255,255,0.85);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background: linear-gradient(160deg,var(--bg1),var(--bg2));
+      color:var(--ink);
+    }
+
+    .wrap{
+      width:100%;
+      max-width:980px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow: 0 20px 45px rgba(10,20,40,0.12);
+      overflow:hidden;
+    }
+
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+    }
+
+    .title{
+      font-family:'Great Vibes',cursive;
+      color:var(--accent);
+      font-size:40px;
+      margin:0;
+      line-height:1;
+    }
+
+    .sub{
+      font-size:14px;
+      color:var(--muted);
+      margin:2px 0 0 0;
+    }
+
+    .content{
+      margin-top:18px;
+      font-size:16px;
+      line-height:1.7;
+      color:var(--ink);
+    }
+
+    .lead{
+      font-size:16px;
+      line-height:1.7;
+    }
+
+    .meta{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .btn-row{
+      margin-top:18px;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .btn {
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      padding:10px 14px;
+      border-radius:10px;
+      font-weight:600;
+      display:inline-block;
+      box-shadow:0 10px 22px rgba(178,59,74,0.14);
+    }
+
+    .outline {
+      background:transparent;
+      color:var(--accent);
+      border:2px solid var(--accent);
+      padding:8px 12px;
+      border-radius:10px;
+      font-weight:600;
+      text-decoration:none;
+    }
+
+    .extra {
+      max-height:0;
+      overflow:hidden;
+      transition: max-height 420ms ease, opacity 420ms ease;
+      opacity:0;
+    }
+
+    .extra.open {
+      opacity:1;
+      max-height:2000px; /* suficiente para el texto largo */
+    }
+
+    .photo-wrap{
+      margin-top:18px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .photo{
+      width:100%;
+      max-width:540px;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 22px 50px rgba(7,10,20,0.18);
+      transform-origin:center;
+    }
+
+    .photo img{
+      display:block;
+      width:100%;
+      height:auto;
+    }
+
+    .final-phrase{
+      margin-top:14px;
+      text-align:center;
+      font-weight:700;
+      color:var(--accent);
+      letter-spacing:0.2px;
+    }
+
+    footer.note{
+      margin-top:16px;
+      color:var(--muted);
+      font-size:13px;
+      text-align:center;
+    }
+
+    @media (max-width:820px){
+      .title{font-size:34px}
+    }
+
+    @media (max-width:520px){
+      body{padding:16px}
+      .title{font-size:30px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="main" aria-labelledby="titulo">
+      <header>
+        <div>
+          <h1 id="titulo" class="title">Ana👸🏼</h1>
+          <div class="sub">Desde el fondo de corazón.</div>
+        </div>
+      </header>
+
+      <div class="content">
+        <p class="lead">
+          Estas líneas nacen porque no supe decir todo cuando debía. Me quedaba mirándote, a veces sin darme cuenta, y en mi cabeza solo había una imagen: lo hermosa que eres, lo afortunado que me sentía y el deseo de que ese momento se volviera infinito.
+        </p>
+
+        <div class="meta">Si quieres seguir leyendo, pulsa <strong>Seguir leyendo</strong>. Si no, está bien, que esto quede en paz contigo.</div>
+
+        <div class="btn-row">
+          <a id="toggleBtn" class="outline" href="#" role="button" aria-expanded="false">Seguir leyendo</a>
+          <a id="openSpotify" class="btn" href="#" target="_blank" rel="noopener">Escuchar canción</a>
+        </div>
+
+
+        <div id="extra" class="extra" aria-hidden="true">
+          <p style="margin-top:18px;">
+            Me quedaba mirándote y perdía la noción del resto. Podía pasar minutos mirando cómo te reías, o cómo fruncías el ceño cuando algo no te gustaba, y todo en mí quería congelar esa imagen. No es exageración: había una paz rara en saber que estabas ahí, y a pesar de que vivo en presente, en la cabeza ya tenía planes, pequeñas cosas que quería hacer contigo: desayunos sin prisa, calles pequeñas que recorrer, canciones que escuchar hasta que nadie supiera la letra, proyectos tontos y reales que sumaran a una vida con menos prisa y más sentido.
+          </p>
+
+          <p>
+            Contigo no cupo el miedo, al menos no de la forma en la que siento miedo normalmente. Soy de los que espera lo peor por reflejo, pero contigo no entró ese pensamiento—ni un segundo—porque todo parecía encajar de otra manera. Me sentí afortunado, sin buscarlo; me sentí completo de a ratos, y me dejé sentir sin barreras.
+          </p>
+
+          <p>
+            Sé que tuve fallos: me cuesta hablar cuando algo me duele y en vez de decirlo me alejo. Lo sé y lo siento con peso. No vengo a justificarme, vengo a decir la verdad: lo intenté a mi manera, y di lo que supe dar. Aun así, ese no hablar a tiempo nos pesó, y me duele más que cualquier orgullo que pueda tener.
+          </p>
+
+          <p>
+            A veces me imagino devolviendo el tiempo solo para corregir palabras o sustituir silencios por abrazos, pero sé que la vida no siempre deja segunda oportunidad por arte de magia. Por eso escribo esto ahora: porque quiero que sepas que no fue una ilusión, que lo que sentí y siento fue y es real. Y sí, recuerdo cuando dijiste “interpretrar” y siempre me río por eso; ese tipo de detalles me alcanzan y me quedan.
+          </p>
+
+          <p>
+            Si pudiera pedir algo en este instante sería que lo hiciéramos de nuevo, pero mejor, sabiendo más, hablando más, sin dejar que la inseguridad se esconda entre nosotros. No te escribo para implorar, ni para inventar promesas vacías. Te escribo porque hay cosas que no se guardan en el pecho sin que te duelan si no las sueltas.
+          </p>
+
+          <p>
+            Quiero que sepas que te guardo un aprecio inmenso, que aquí hubo entrega y ternura genuina. Quiero que sepas también que valoro mi dignidad y mis tiempos; no me quedaré esperando eternamente a que un recuerdo vuelva si no hay intención en hacerlo real desde ambos lados. Pero si alguna vez decides que quieres intentar otra vez, que quieres apostar por lo que tuvimos y lo que podríamos ser, que lo sepas: aquí hay alguien que lo haría con las manos abiertas, sin condiciones vacías, con ganas de construir sin miedo.
+          </p>
+
+          <p>
+            Si sigues leyendo esto y lo sientes igual, dímelo en cualquier forma: con una palabra, con un café, con un silencio compartido. Si no, al menos que quede claro que no hubo mentira en esto, que fui sincero hasta donde supe y que te agradezco todo lo que despertaste en mí.
+          </p>
+
+          <p style="margin-bottom:6px;">
+            Gracias por los minutos que fueron nuestros, por las miradas que no necesitaban traducción, por las risas tontas y las conversaciones largas. Gracias por haberme permitido sentir algo que no sabía que aún podía sentir así.
+          </p>
+        </div>
+
+        <!-- foto y cierre (aparecen cuando el extra está abierto) -->
+        <div id="photoArea" class="photo-wrap" style="display:none;">
+          <div class="photo">
+            <!-- reemplaza imagen.jpg por el archivo que subirás -->
+            <img id="laFoto" src="imagen ana.jpg" alt="Nosotros">
+          </div>
+          <div class="final-phrase">Con amor termina lo que con amor comenzó.</div>
+        </div>
+
+        <footer class="note">Con el corazón en la mano. — Manuel.</footer>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const spotifyLink = "https://open.spotify.com/search/cali%20y%20el%20dande"; 
+  const imagenNombre = "imagen ana.jpg"; 
+  
+  document.getElementById('openSpotify').href = spotifyLink;
+  document.getElementById('laFoto').src = imagenNombre;
+
+  const toggleBtn = document.getElementById('toggleBtn');
+  const extra = document.getElementById('extra');
+  const photoArea = document.getElementById('photoArea');
+
+  toggleBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    const isOpen = extra.classList.contains('open');
+    if(!isOpen){
+      extra.classList.add('open');
+      extra.setAttribute('aria-hidden', 'false');
+      toggleBtn.textContent = "Mostrar menos";
+      toggleBtn.setAttribute('aria-expanded','true');
+      photoArea.style.display = "block";
+      // smooth scroll to show beginning of extra on small screens
+      setTimeout(()=> {
+        if(window.innerWidth < 820){
+          extra.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      }, 250);
+    } else {
+      extra.classList.remove('open');
+      extra.setAttribute('aria-hidden', 'true');
+      toggleBtn.textContent = "Seguir leyendo";
+      toggleBtn.setAttribute('aria-expanded','false');
+      photoArea.style.display = "none";
+      window.scrollTo({top:0, behavior:'smooth'});
+    }
+  });
+
+
+  toggleBtn.addEventListener('keydown', function(e){
+    if(e.key === 'Enter' || e.key === ' '){
+      e.preventDefault();
+      toggleBtn.click();
+    }
+  });
+</script>
+</body>
+</html>
